@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand">{{ getBrandName() }}</a>
+      <ul class="nav navbar-nav">
+        <li [class.active]="isRouteActive('main')">
+          <a routerLink="/main">Main</a>
+        </li>
+        <li [class.active]="isRouteActive('users')">
+          <a routerLink="/users">Users</a>
+        </li>
+        <li [class.active]="isRouteActive('todos')">
+          <a routerLink="/todos">ToDos</a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,46 @@
+<!--<ul>
+  <li *ngFor="let user of users">{{ user.name }}</li>
+<ul> -->
+<h2> Users </h2>
+<div class="col-md-6" >
+    <div class="row" *ngFor="let user of users">
+        <div class="col-xs-12 col-sm-7 col-md-10">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="http://lorempixel.com/300/300/cats/{{user.id}}" 
+                            alt="" class="img-rounded img-responsive" 
+                            routerLink="/users/{{user.id}}" 
+                            style="cursor: pointer;"/>
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4 (click)="onUserClick(user)" style="cursor: pointer;">{{ user.name }}</h4>
+                        <small>Realtor<i class="glyphicon glyphicon-registration-mark">
+                        </i></small>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>{{ user.email }}
+                            <br />
+                            <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">{{ user.website }}</a>
+                            <br />
+                        <!-- Split button -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary">
+                                Edit</button>
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span><span class="sr-only">Social</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Github</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
